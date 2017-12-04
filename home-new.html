@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Future Tech | Welcome to Future Tech</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/w3.css">
@@ -10,6 +10,15 @@
 body,h1,h2,h3,h4,h5,a,span {font-family: "Lato", sans-serif}
 .w3-quarter img{margin-bottom: -6px; cursor: pointer}
 .w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+    
+#nav_tutorials,#nav_references,#nav_examples {
+display:none;
+padding-bottom:40px;
+position:absolute;
+width:100%;
+z-index:99 !important;
+}
+    
 </style>
 <body class="w3-light-grey">
 
@@ -34,37 +43,34 @@ body,h1,h2,h3,h4,h5,a,span {font-family: "Lato", sans-serif}
     <div class="w3-container  w3-twothird">
       <span class="w3-right w3-display-right">
         <a href="#"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue ">HOME</a>
+          <a href="javascript:void(0)" onclick="openSolutionMenu()"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue w3-dropdown-click">
+            SOLUTIONS
+            <i class="fa fa-angle-down fa-lg"></i>
+        </a>
+<!--
         <a href="javascript:void(0)" onclick="mySubmenu('solution-menu')"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue ">
             SOLUTIONS
             <i class="fa fa-angle-down fa-lg"></i>
         </a>
-        <a href="#"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue ">
-          <b>
+-->
+        <a href="javascript:void(0)" onclick="openProductMenu()"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue ">
             PRODUCTS
-            <i class="fa fa-angle-down fa-lg"></i>
-          </b>
+            <i class="fa fa-angle-down fa-lg"></i>          
         </a>
-        <a href="#"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue ">
-          <b>
+        <a href="#"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue ">        
             SERVICES
-            <i class="fa fa-angle-down fa-lg"></i>
-          </b>
+            <i class="fa fa-angle-down fa-lg"></i>          
         </a>
-        <a href="#"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue "><b>PROMOTIONS</b></a>
-        <a href="#"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue "><b>WHERE TO BUY</b></a>
-        <a href="#"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue "><b>SUPPORTS</b></a>
+        <a href="#"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue ">PROMOTIONS</a>
+        <a href="#"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue ">WHERE TO BUY</a>
+        <a href="#"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue ">SUPPORTS</a>
 
 
-        <a href="javascript:void(0)" onclick="mySubmenu('solution-menu')" class="w3-bar-item w3-button w3-hover-blue">
-          Solutions <i class="fa fa-caret-down"></i>
-        </a>
-
-
-        <a href="#"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue ">
-          <b>
+        <a href="javascript:void(0)" onclick="w3_open_nav('tutorials')" id="navbtn_tutorials"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue ">
+          
             MORE
             <i class="fa fa-angle-down fa-lg"></i>
-          </b>
+          
         </a>
         <a href="javascript:void(0)" class=" w3-bar-item w3-padding w3-hide-large   w3-button w3-white " onclick="w3_open()">☰</a>
       </span>
@@ -83,27 +89,141 @@ body,h1,h2,h3,h4,h5,a,span {font-family: "Lato", sans-serif}
       <a href="#" class="w3-bar-item w3-button w3-hover-none w3-hover-blue">Link 3</a>
       <a href="javascript:void(0)" class="w3-right w3-bar-item w3-padding    w3-button w3-white" onclick="w3_open()">☰</a>
   </span> -->
+    
 
+    <!--  testing nav w3 school  -->
+
+    
+    <p id="demo"></p>
+    
+    
 </header>
 
 <!-- This is sub nav menu panel -->
-<div class="w3-container w3-blue">
-
+<div class="w3-container w3-blue">    
+    
   <!-- solution sub menu -->
   <div id="solution-menu" class="w3-panel w3-display-container w3-hide w3-medium">
-    <span onclick="mySubmenu('solution-menu')" class="w3-button w3-border w3-border-white w3-text-white w3-hover-white w3-large w3-display-topright"><i class="fa fa-close"></i></span>
+    <span onclick="myFunction('solution-menu')" class="w3-button w3-border w3-border-white w3-text-white w3-hover-white w3-large w3-display-topright"><i class="fa fa-close"></i></span>
 
-    <div class="w3-bar">
-      <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Home</a>
-      <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Small & Medium Business</a>
-      <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Enterprise</a>
+    <div class="w3-row">
+        <div class="w3-col l4">
+            <h1 class="w3-large">Solution by Size</h1>
+            <p>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Home</a> <br>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Small & Medium Business</a> <br>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Enterprise</a>
+            </p>
+<!--
+            <div class="w3-bar-block">
+              <a href="#" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Home</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Small & Medium Business</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Enterprise</a>
+            </div>
+-->
+        </div>
+        
+        <div class="w3-col l4">
+            <h1 class="w3-large">Solution by Category</h1>
+            <p>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Hotel & Real Estate Solution</a> <br/>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">CCTV & Security System</a>
+                <br/>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">System Integration</a>
+                <br/>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Outside Plant (OSP)</a>
+                <br/>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">GSM & Telecom Solution</a>
+            </p>
+            
+<!--
+            <div class="w3-bar-block">
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Home</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Small & Medium Business</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Enterprise</a>
+            </div>
+-->
+        </div>
+        
+        <div class="w3-col l3">
+            <img src="img/home-slider/cctv.png" class="w3-image" />
+        </div>
+        
     </div>
-
+            
   </div>
 
+    <!--  Product Sub Menu  -->
+    <div id="product-menu" class="w3-panel w3-display-container w3-blue w3-hide w3-medium" >
+    <span onclick="myFunction('product-menu')" class="w3-button w3-border w3-border-white w3-text-white w3-hover-white w3-large w3-display-topright"><i class="fa fa-close"></i></span>
+
+    <div class="w3-row">
+        <div class="w3-col l4">
+            <h1 class="w3-large">Product by Category</h1>
+            <p>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Home</a> <br>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Small & Medium Business</a> <br>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Enterprise</a>
+            </p>
+<!--
+            <div class="w3-bar-block">
+              <a href="#" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Home</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Small & Medium Business</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Enterprise</a>
+            </div>
+-->
+        </div>
+        
+        <div class="w3-col l4">
+            <h1 class="w3-large">Solution by Category</h1>
+            <p>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Hotel & Real Estate Solution</a> <br/>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">CCTV & Security System</a>
+                <br/>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">System Integration</a>
+                <br/>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Outside Plant (OSP)</a>
+                <br/>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">GSM & Telecom Solution</a>
+            </p>
+            
+<!--
+            <div class="w3-bar-block">
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Home</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Small & Medium Business</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Enterprise</a>
+            </div>
+-->
+        </div>
+        
+        <div class="w3-col l3">
+            <img src="img/home-slider/cctv.png" class="w3-image" />
+        </div>
+        
+    </div>
+            
+  </div>
+    
 </div>
 
 
+<button onclick="w3.toggleShow('#London')">Toggle Hide/Show</button>
+
+<div id="London" class="city">
+  <h2>London</h2>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="city">
+  <h2>Paris</h2>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Tokyo" class="city">
+  <h2>Tokyo</h2>
+  <p>Tokyo is the capital of Japan.</p>
+</div>    
+    
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
@@ -291,6 +411,10 @@ body,h1,h2,h3,h4,h5,a,span {font-family: "Lato", sans-serif}
 <!-- End page content -->
 </div>
 
+    
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script src="js/ft.js"></script>
+    
 <script>
 // Script to open and close sidebar
 function w3_open() {
@@ -316,14 +440,27 @@ function onClick(element) {
 
 <script>
   // This is sub menu js code
-  function mySubmenu(id) {
-      var x = document.getElementById(id);
-      if (x.className.indexOf("w3-show") == -1) {
-          x.className += " w3-show";
-      } else {
-          x.className = x.className.replace(" w3-show", "");
-      }
-  }
+    
+//  function mySubmenu(id) {
+//      var x = document.getElementById(id);
+//
+//      if (x.className.indexOf("w3-show") == -1) {
+//          x.className += " w3-show";          
+//      } else {
+//          close_submenu("solution-menu");
+//          close_submenu("product-menu");
+//          x.className = x.className.replace(" w3-show", "");
+//          x.previousElementSibling.className = x.previousElementSibling.className.replace("w3-red", "w3-black");
+//      }
+//  }
+//    
+//    function close_submenu(id){
+//        var x = document.getElementById(id);
+//        x.className = x.className.replace(" w3-show", "");        
+//    }
+//
+
+    
 </script>
 
 </body>
