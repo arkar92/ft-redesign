@@ -53,3 +53,6 @@ function openMoreMenu() {
         more.className = more.className.replace(" w3-show", "");
     }
 }
+
+// Home Page Slider JS
+homeSlideShow = w3.slideshow(".home-slider", 4000);
