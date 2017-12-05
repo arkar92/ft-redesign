@@ -57,7 +57,7 @@ z-index:99 !important;
             PRODUCTS
             <i class="fa fa-angle-down fa-lg"></i>          
         </a>
-        <a href="#"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue ">        
+        <a href="javascript:void(0)" onclick="openServiceMenu()"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue ">        
             SERVICES
             <i class="fa fa-angle-down fa-lg"></i>          
         </a>
@@ -66,7 +66,7 @@ z-index:99 !important;
         <a href="#"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue ">SUPPORTS</a>
 
 
-        <a href="javascript:void(0)" onclick="w3_open_nav('tutorials')" id="navbtn_tutorials"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue ">
+        <a href="javascript:void(0)" onclick="openMoreMenu()" id="navbtn_tutorials"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue ">
           
             MORE
             <i class="fa fa-angle-down fa-lg"></i>
@@ -93,8 +93,7 @@ z-index:99 !important;
 
     <!--  testing nav w3 school  -->
 
-    
-    <p id="demo"></p>
+
     
     
 </header>
@@ -104,7 +103,7 @@ z-index:99 !important;
     
   <!-- solution sub menu -->
   <div id="solution-menu" class="w3-panel w3-display-container w3-hide w3-medium">
-    <span onclick="myFunction('solution-menu')" class="w3-button w3-border w3-border-white w3-text-white w3-hover-white w3-large w3-display-topright"><i class="fa fa-close"></i></span>
+    <span onclick="openSolutionMenu()" class="w3-button w3-border w3-border-white w3-text-white w3-hover-white w3-large w3-display-topright"><i class="fa fa-close"></i></span>
 
     <div class="w3-row">
         <div class="w3-col l4">
@@ -155,11 +154,11 @@ z-index:99 !important;
 
     <!--  Product Sub Menu  -->
     <div id="product-menu" class="w3-panel w3-display-container w3-blue w3-hide w3-medium" >
-    <span onclick="myFunction('product-menu')" class="w3-button w3-border w3-border-white w3-text-white w3-hover-white w3-large w3-display-topright"><i class="fa fa-close"></i></span>
+    <span onclick="openProductMenu()" class="w3-button w3-border w3-border-white w3-text-white w3-hover-white w3-large w3-display-topright"><i class="fa fa-close"></i></span>
 
     <div class="w3-row">
         <div class="w3-col l4">
-            <h1 class="w3-large">Product by Category</h1>
+            <h1 class="w3-large">Product by Size</h1>
             <p>
                 <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Home</a> <br>
                 <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Small & Medium Business</a> <br>
@@ -175,17 +174,40 @@ z-index:99 !important;
         </div>
         
         <div class="w3-col l4">
-            <h1 class="w3-large">Solution by Category</h1>
-            <p>
-                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Hotel & Real Estate Solution</a> <br/>
-                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">CCTV & Security System</a>
-                <br/>
-                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">System Integration</a>
-                <br/>
-                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Outside Plant (OSP)</a>
-                <br/>
-                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">GSM & Telecom Solution</a>
-            </p>
+            <h1 class="w3-large">Product by Brnad</h1>
+            <div class="row">
+                <div class="w3-half">
+                    <p>
+                        <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Cisco</a> 
+                        <br/>
+                        <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Alcatel Lucent</a>
+                        <br/>
+                        <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Plumett</a>
+                        <br/>
+                        <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Link</a>
+                        <br/>
+                        <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">ZyXEL</a> 
+                        <br/>
+                        <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">PABX System</a>
+                    </p>
+                </div>
+                <div class="w3-half">
+                    <p>
+                        <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">HIK Vision</a>
+                        <br/>
+                        <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">MATV Solution</a>
+                        <br/>
+                        <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">PA System</a>
+                        <br/>
+                        <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Fiber Optic Cable</a>
+                        <br/>
+                        <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Networking</a> 
+                        <br/>
+                        <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Server Racks & Cabinets</a>
+                    </p>
+                </div>
+            </div>
+            
             
 <!--
             <div class="w3-bar-block">
@@ -203,27 +225,136 @@ z-index:99 !important;
     </div>
             
   </div>
+
+    <!--  Service Sub Menu  -->
+    <div id="service-menu" class="w3-panel w3-display-container w3-blue w3-hide w3-medium" >
+    <span onclick="openServiceMenu()" class="w3-button w3-border w3-border-white w3-text-white w3-hover-white w3-large w3-display-topright"><i class="fa fa-close"></i></span>
+
+    <div class="w3-row">
+        <div class="w3-col l4">
+            <h1 class="w3-large">Service by Size</h1>
+            <p>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Home</a> <br>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Small & Medium Business</a> <br>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Enterprise</a>
+            </p>
+<!--
+            <div class="w3-bar-block">
+              <a href="#" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Home</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Small & Medium Business</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Enterprise</a>
+            </div>
+-->
+        </div>
+        
+        <div class="w3-col l4">
+            <h1 class="w3-large">Service by Category</h1>            
+                <p>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">System Integration</a> 
+                    <br/>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">ELV System (Hotel & Real Estate)</a>
+                    <br/>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">CCTV & Security System</a>
+                    <br/>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Outside Plant (OSP)</a>
+                    <br/>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">GSM BTS & Transmission System Installation</a>
+                    <br/>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">IT & Telecom Product Distribution</a>
+                </p>
+                
+                
+            
+            
+            
+<!--
+            <div class="w3-bar-block">
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Home</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Small & Medium Business</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Enterprise</a>
+            </div>
+-->
+        </div>
+        
+        <div class="w3-col l3">
+            <img src="img/home-slider/cctv.png" class="w3-image" />
+        </div>
+        
+    </div>
+            
+  </div>    
+
+    <!--  More Sub Menu  -->
+    <div id="more-menu" class="w3-panel w3-display-container w3-blue w3-hide w3-medium" >
+    <span onclick="openMoreMenu()" class="w3-button w3-border w3-border-white w3-text-white w3-hover-white w3-large w3-display-topright"><i class="fa fa-close"></i></span>
+
+    <div class="w3-row">
+        <div class="w3-col l4">
+            <h1 class="w3-large">Company</h1>
+            <p>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">About Us</a> <br>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Previous Project</a> <br>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Contact Us</a> <br>                
+            </p>
+<!--
+            <div class="w3-bar-block">
+              <a href="#" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Home</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Small & Medium Business</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Enterprise</a>
+            </div>
+-->
+        </div>
+        
+        <div class="w3-col l4">
+            <h1 class="w3-large">Work with Us</h1>            
+                <p>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">We're hiring</a> 
+                    <br/>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Sub Contractor</a>
+                    <br/>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Marketing</a>
+                    <br/>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Get Technical Support</a>
+                </p>           
+        </div>
+        
+        <div class="w3-col l4">
+            <h1 class="w3-large">External Link</h1>            
+                <p>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Site Map</a> 
+                    <br/>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Term and Condition</a>
+                </p>
+            
+            <h1 class="w3-large">Social Network</h1>
+                <p>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Facebook</a> |   
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Youtube</a> |
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">LinkedIn</a> |
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Twitter</a>
+                </p>            
+        </div>
+        
+    </div>
+        
+    <!-- search / subscribe   -->
+    <div class="w3-row">
+        <div class="w3-half">
+            <h1 class="w3-medium">Subscribe</h1>
+            <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:50%"></p>
+            <button type="button" class="w3-button w3-white w3-margin-bottom">Subscribe</button>
+        </div>
+        <div class="w3-half">
+            <h1 class="w3-medium">Search</h1>
+            <p><input class="w3-input w3-border" type="text" placeholder="Enter search keyword" style="width:50%"></p>
+            <button type="button" class="w3-button w3-white w3-margin-bottom">Search</button>
+        </div>
+    </div>
+            
+  </div>   
     
 </div>
 
-
-<button onclick="w3.toggleShow('#London')">Toggle Hide/Show</button>
-
-<div id="London" class="city">
-  <h2>London</h2>
-  <p>London is the capital city of England.</p>
-</div>
-
-<div id="Paris" class="city">
-  <h2>Paris</h2>
-  <p>Paris is the capital of France.</p> 
-</div>
-
-<div id="Tokyo" class="city">
-  <h2>Tokyo</h2>
-  <p>Tokyo is the capital of Japan.</p>
-</div>    
-    
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
