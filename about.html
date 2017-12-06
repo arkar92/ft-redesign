@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html>
+<title>Future Tech | Welcome to Future Tech</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/ft.css">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,a,span {font-family: "Lato", sans-serif}
+.w3-quarter img{margin-bottom: -6px; cursor: pointer}
+.w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+    
+#nav_tutorials,#nav_references,#nav_examples {
+display:none;
+padding-bottom:40px;
+position:absolute;
+width:100%;
+z-index:99 !important;
+}
+    
+</style>
+<body class="w3-light-grey">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
+  <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">CLOSE</a>
+  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">PORTFOLIO</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">ABOUT ME</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">CONTACT</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-bar w3-white w3-medium  w3-padding-16">
+
+  <div class="w3-row w3-display-container">
+    <div class="w3-container w3-third">
+      <a class="w3-bar-item w3-button w3-hover-none w3-hover-light-grey" href="#">
+        <img style="height:2.5em;" src="img/logo/ft-logo.png" alt="Future Tech Logo">
+      </a>
+    </div>
+
+    <div class="w3-container  w3-twothird">
+      <span class="w3-right w3-display-right">
+        <a href="#"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue ">HOME</a>
+          <a href="javascript:void(0)" onclick="openSolutionMenu()"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue w3-dropdown-click">
+            SOLUTIONS
+            <i class="fa fa-angle-down fa-lg"></i>
+        </a>
+<!--
+        <a href="javascript:void(0)" onclick="mySubmenu('solution-menu')"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue ">
+            SOLUTIONS
+            <i class="fa fa-angle-down fa-lg"></i>
+        </a>
+-->
+        <a href="javascript:void(0)" onclick="openProductMenu()"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue ">
+            PRODUCTS
+            <i class="fa fa-angle-down fa-lg"></i>          
+        </a>
+        <a href="javascript:void(0)" onclick="openServiceMenu()"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue ">        
+            SERVICES
+            <i class="fa fa-angle-down fa-lg"></i>          
+        </a>
+        <a href="#"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue ">PROMOTIONS</a>
+        <a href="#"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue ">WHERE TO BUY</a>
+        <a href="#"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue ">SUPPORTS</a>
+
+
+        <a href="javascript:void(0)" onclick="openMoreMenu()" id="navbtn_tutorials"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue ">
+          
+            MORE
+            <i class="fa fa-angle-down fa-lg"></i>
+          
+        </a>
+        <a href="javascript:void(0)" class=" w3-bar-item w3-padding w3-hide-large   w3-button w3-white " onclick="w3_open()">☰</a>
+      </span>
+    </div>
+  </div>
+<!--
+  <span class="w3-left w3-padding">
+      <a class="w3-bar-item w3-button w3-hover-none w3-hover-light-grey" href="#">
+        <img style="height:1.5rem;" src="img/logo/ft-logo.png" alt="Future Tech Logo">
+      </a>
+  </span> -->
+
+  <!-- <span class="w3-right w3-padding">
+      <a href="#"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue">Link 1</a>
+      <a href="#"  class="w3-bar-item w3-button w3-hover-none w3-hover-blue">Link 2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-none w3-hover-blue">Link 3</a>
+      <a href="javascript:void(0)" class="w3-right w3-bar-item w3-padding    w3-button w3-white" onclick="w3_open()">☰</a>
+  </span> -->
+    
+
+    <!--  testing nav w3 school  -->
+
+
+    
+    
+</header>
+
+<!-- This is sub nav menu panel -->
+<div class="w3-container w3-blue">    
+    
+  <!-- solution sub menu -->
+  <div id="solution-menu" class="w3-panel w3-display-container w3-hide w3-medium">
+    <span onclick="openSolutionMenu()" class="w3-button w3-border w3-border-white w3-text-white w3-hover-white w3-large w3-display-topright"><i class="fa fa-close"></i></span>
+
+    <div class="w3-row">
+        <div class="w3-col l4">
+            <h1 class="w3-large">Solution by Size</h1>
+            <p>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Home</a> <br>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Small & Medium Business</a> <br>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Enterprise</a>
+            </p>
+<!--
+            <div class="w3-bar-block">
+              <a href="#" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Home</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Small & Medium Business</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Enterprise</a>
+            </div>
+-->
+        </div>
+        
+        <div class="w3-col l4">
+            <h1 class="w3-large">Solution by Category</h1>
+            <p>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Hotel & Real Estate Solution</a> <br/>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">CCTV & Security System</a>
+                <br/>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">System Integration</a>
+                <br/>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Outside Plant (OSP)</a>
+                <br/>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">GSM & Telecom Solution</a>
+            </p>
+            
+<!--
+            <div class="w3-bar-block">
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Home</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Small & Medium Business</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Enterprise</a>
+            </div>
+-->
+        </div>
+        
+        <div class="w3-col l3">
+            <img src="img/home-slider/cctv.png" class="w3-image" />
+        </div>
+        
+    </div>
+            
+  </div>
+
+    <!--  Product Sub Menu  -->
+    <div id="product-menu" class="w3-panel w3-display-container w3-blue w3-hide w3-medium" >
+    <span onclick="openProductMenu()" class="w3-button w3-border w3-border-white w3-text-white w3-hover-white w3-large w3-display-topright"><i class="fa fa-close"></i></span>
+
+    <div class="w3-row">
+        <div class="w3-col l4">
+            <h1 class="w3-large">Product by Size</h1>
+            <p>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Home</a> <br>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Small & Medium Business</a> <br>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Enterprise</a>
+            </p>
+<!--
+            <div class="w3-bar-block">
+              <a href="#" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Home</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Small & Medium Business</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Enterprise</a>
+            </div>
+-->
+        </div>
+        
+        <div class="w3-col l4">
+            <h1 class="w3-large">Product by Brnad</h1>
+            <div class="row">
+                <div class="w3-half">
+                    <p>
+                        <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Cisco</a> 
+                        <br/>
+                        <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Alcatel Lucent</a>
+                        <br/>
+                        <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Plumett</a>
+                        <br/>
+                        <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Link</a>
+                        <br/>
+                        <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">ZyXEL</a> 
+                        <br/>
+                        <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">PABX System</a>
+                    </p>
+                </div>
+                <div class="w3-half">
+                    <p>
+                        <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">HIK Vision</a>
+                        <br/>
+                        <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">MATV Solution</a>
+                        <br/>
+                        <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">PA System</a>
+                        <br/>
+                        <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Fiber Optic Cable</a>
+                        <br/>
+                        <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Networking</a> 
+                        <br/>
+                        <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Server Racks & Cabinets</a>
+                    </p>
+                </div>
+            </div>
+            
+            
+<!--
+            <div class="w3-bar-block">
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Home</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Small & Medium Business</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Enterprise</a>
+            </div>
+-->
+        </div>
+        
+        <div class="w3-col l3">
+            <img src="img/home-slider/cctv.png" class="w3-image" />
+        </div>
+        
+    </div>
+            
+  </div>
+
+    <!--  Service Sub Menu  -->
+    <div id="service-menu" class="w3-panel w3-display-container w3-blue w3-hide w3-medium" >
+    <span onclick="openServiceMenu()" class="w3-button w3-border w3-border-white w3-text-white w3-hover-white w3-large w3-display-topright"><i class="fa fa-close"></i></span>
+
+    <div class="w3-row">
+        <div class="w3-col l4">
+            <h1 class="w3-large">Service by Size</h1>
+            <p>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Home</a> <br>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Small & Medium Business</a> <br>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Enterprise</a>
+            </p>
+<!--
+            <div class="w3-bar-block">
+              <a href="#" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Home</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Small & Medium Business</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Enterprise</a>
+            </div>
+-->
+        </div>
+        
+        <div class="w3-col l4">
+            <h1 class="w3-large">Service by Category</h1>            
+                <p>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">System Integration</a> 
+                    <br/>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">ELV System (Hotel & Real Estate)</a>
+                    <br/>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">CCTV & Security System</a>
+                    <br/>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Outside Plant (OSP)</a>
+                    <br/>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">GSM BTS & Transmission System Installation</a>
+                    <br/>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">IT & Telecom Product Distribution</a>
+                </p>
+                
+                
+            
+            
+            
+<!--
+            <div class="w3-bar-block">
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Home</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Small & Medium Business</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Enterprise</a>
+            </div>
+-->
+        </div>
+        
+        <div class="w3-col l3">
+            <img src="img/home-slider/cctv.png" class="w3-image" />
+        </div>
+        
+    </div>
+            
+  </div>    
+
+    <!--  More Sub Menu  -->
+    <div id="more-menu" class="w3-panel w3-display-container w3-blue w3-hide w3-medium" >
+    <span onclick="openMoreMenu()" class="w3-button w3-border w3-border-white w3-text-white w3-hover-white w3-large w3-display-topright"><i class="fa fa-close"></i></span>
+
+    <div class="w3-row">
+        <div class="w3-col l4">
+            <h1 class="w3-large">Company</h1>
+            <p>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">About Us</a> <br>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Previous Project</a> <br>
+                <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Contact Us</a> <br>                
+            </p>
+<!--
+            <div class="w3-bar-block">
+              <a href="#" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Home</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Small & Medium Business</a>
+              <a href="#" style="border:2px solid white" class="w3-bar-item w3-button w3-hover-none  w3-text-white w3-hover-white">Enterprise</a>
+            </div>
+-->
+        </div>
+        
+        <div class="w3-col l4">
+            <h1 class="w3-large">Work with Us</h1>            
+                <p>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">We're hiring</a> 
+                    <br/>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Sub Contractor</a>
+                    <br/>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Marketing</a>
+                    <br/>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Get Technical Support</a>
+                </p>           
+        </div>
+        
+        <div class="w3-col l4">
+            <h1 class="w3-large">External Link</h1>            
+                <p>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Site Map</a> 
+                    <br/>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Term and Condition</a>
+                </p>
+            
+            <h1 class="w3-large">Social Network</h1>
+                <p>
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Facebook</a> |   
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Youtube</a> |
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">LinkedIn</a> |
+                    <a href="#" class="w3-button w3-hover-none w3-border-blue w3-bottombar w3-hover-border-black">Twitter</a>
+                </p>            
+        </div>
+        
+    </div>
+        
+    <!-- search / subscribe   -->
+    <div class="w3-row">
+        <div class="w3-half">
+            <h1 class="w3-medium">Subscribe</h1>
+            <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:50%"></p>
+            <button type="button" class="w3-button w3-white w3-margin-bottom">Subscribe</button>
+        </div>
+        <div class="w3-half">
+            <h1 class="w3-medium">Search</h1>
+            <p><input class="w3-input w3-border" type="text" placeholder="Enter search keyword" style="width:50%"></p>
+            <button type="button" class="w3-button w3-white w3-margin-bottom">Search</button>
+        </div>
+    </div>
+            
+  </div>   
+    
+</div>
+    
+<!--End of Navigation-->
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+<!--  About Us Page Header  -->
+<div class="w3-display-container about-banner">
+    <div class="w3-display-left w3-padding w3-padding-32 w3-blue">
+        <h1 class="w3-xxxlarge w3-text-white">
+            About of Our Company
+        </h1>
+        <div class="w3-bar">
+          <a href="home-new.html" class="w3-button w3-border w3-border-white">Home</a>
+          <a href="about.html" class="w3-button w3-border w3-border-white w3-white">About Us</a>
+        </div>
+    </div>
+</div>
+
+<!-- Offer to download company profile -->
+<div class="w3-blue">
+    <div class="w3-row w3-padding w3-padding-16 w3-center w3-content">
+        <div class="w3-half">
+            <h1 class="w3-large">Do you want to download our company profile?</h1>
+        </div>
+        <div class="w3-half">
+            <a href="#" class="w3-button w3-large w3-white w3-text-blue">Download Now</a>
+        </div>
+    </div>    
+</div>    
+    
+<!-- Introduction of Future Tech -->    
+<div class="w3-light-grey w3-container w3-content w3-padding-64">    
+    <h1 class="w3-xxlarge w3-text-blue">Who we are ?</h1>
+    <p class="w3-large">
+        Future Tech Information Technology has been originally founded in the year 2000
+        and re-established in the year 2006 by the registration number, No. 457 of 2006 – 2007, 
+        aiming to deliver ICT services throughout the nationwide in Myanmar. And throughout the 
+        years of experience in the market, it has developed a highly qualified and experienced staffs 
+        specializing in Consultation, Systems Designing, Customer Support, Sales and Marketing.
+    </p>
+    <p class="w3-large">
+        Future Tech is looking to the future with confident in the technology to help resolving the most 
+        sophisticated customers’ ICT requirements and satisfying their needs even more. Enjoying every 
+        moment in our work because we do what we love, and we love what we do.
+    </p>
+    <p class="w3-large">
+        To develop and deliver state of the art communication technology solutions; with
+        very professional customer services and support, aiming at customer satisfaction and a commitment 
+        to market needs, supporting progressive organizations in the region and continue improving our ability 
+        in Consultation, System Design, Project Implementation, System Integration, Sales Support & Customer Care 
+        to enhance our customer’s satisfaction to make it a joyful and fruitful experience.
+    </p>
+    <p class="w3-large">
+        Future Tech also aims to respond to each customer’s requirements with an
+        optimized solution, not only to satisfy these specific requirements, but also, 
+        to exceed the customer’s expectations.
+    </p>
+    
+</div>
+    
+<!-- Vision / Mission -->
+<div class="w3-white">
+    <div class="w3-row w3-container w3-content w3-white">
+        <div class="w3-half w3-center w3-padding-64">
+            <h2 class="w3-xxlarge w3-text-blue">
+                Vision
+            </h2>
+            <p class="w3-large">
+                Aim to be a leading ICT Solution Provider in Myanmar.
+            </p>
+        </div>
+
+        <div class="w3-half w3-center w3-padding-64 w3-border-left">
+            <h2 class="w3-xxlarge w3-text-blue">
+                Mission
+            </h2>
+            <p class="w3-large">
+                We are committed to deliver the best ICT solution and excellence
+                in our products and services
+            </p>
+        </div>
+
+    </div>
+    
+    <div class="w3-container w3-center w3-padding-64 w3-border">
+        <div class="w3-content">
+            <h2 class="w3-xxlarge w3-text-blue">Company Structure</h2>
+            <img src="img/banner/ft-org-chart.PNG" class="w3-image" />
+        </div>        
+    </div>
+    
+</div>
+
+<!--What we do-->
+<div class="w3-blue w3-container w3-padding-64 w3-center">
+    <div class="w3-content">
+        <h1 class="w3-xxlarge">What we do?</h1>
+        <p class="w3-large">
+            Future Tech has been successfully providing nationwide corporate networks as turnkey 
+            solutions to the corporate customers and giving continuous support to them to achieve 
+            maximum up time.The customers are getting good results on the business with respect to 
+            the nationwide efficient communication network.
+        </p>
+    </div>
+    
+    <!-- Service Section-->    
+    <div class="w3-row-padding w3-content">        
+        
+        <div class="w3-third w3-container w3-border w3-border-white w3-hover-white">
+            <a href="#" class="w3-button w3-hover-white">
+                <h3 class="w3-large">System Integration</h3>
+            </a>
+        </div>
+        <div class="w3-third w3-container w3-border w3-border-white w3-hover-white">
+            <a href="#" class="w3-button w3-hover-white">
+                <h3 class="w3-large">ELV System (Hotel & Real Estate)</h3>
+            </a>
+        </div>
+        <div class="w3-third w3-container w3-border w3-border-white w3-hover-white">
+            <a href="#" class="w3-button w3-hover-white">
+                <h3 class="w3-large">CCTV & Security System</h3>
+            </a>
+        </div>
+        
+        <div class="w3-third w3-container w3-border w3-border-white w3-hover-white">
+            <a href="#" class="w3-button w3-hover-white">
+                <h3 class="w3-large">Outside Plant (OSP)</h3>
+            </a>
+        </div>
+        <div class="w3-third w3-container w3-border w3-border-white w3-hover-white">
+            <a href="#" class="w3-button w3-hover-white">
+                <h3 class="w3-large">GSM,BTS & Transmission System</h3>
+            </a>
+        </div>
+        <div class="w3-third w3-container w3-border w3-border-white w3-hover-white">
+            <a href="#" class="w3-button w3-hover-white">
+                <h3 class="w3-large">IT & Telecom products distribution</h3>
+            </a>
+        </div>
+    </div>
+</div>
+  
+   
+
+<!--Customer & Partner Section-->
+<div class="w3-padding-64 w3-white">
+
+    <!-- Customer Section -->
+    <div class="w3-row w3-white w3-center">
+        <h1 class="w3-text-blue w3-xxlarge">Our Valuable Customers</h1>
+        <div class="w3-col l3">
+            <img src="img/logo/client/aureum_palace.png" />
+        </div>
+        <div class="w3-col l3">
+            <img src="img/logo/client/bangladesh_em.png" />
+        </div>
+        <div class="w3-col l3">
+            <img src="img/logo/client/blue_ocean.png" />
+        </div>
+        <div class="w3-col l3">
+            <img src="img/logo/client/carlsberg.png" />
+        </div>
+        <div class="w3-col l3">
+            <img src="img/logo/client/coca_cola.png" />
+        </div>
+        <div class="w3-col l3">
+            <img src="img/logo/client/colliers.png" />
+        </div>
+        <div class="w3-col l3">
+            <img src="img/logo/client/daewoo.png" />
+        </div>
+        <div class="w3-col l3">
+            <img src="img/logo/client/ensco.png" />
+        </div>
+        <div class="w3-col l3">
+            <img src="img/logo/client/fonterra.png" />
+        </div>
+        <div class="w3-col l3">
+            <img src="img/logo/client/kandawgyi_palace.png" />
+        </div>
+        <div class="w3-col l3">
+            <img src="img/logo/client/malaysia_em.png" />
+        </div>
+        <div class="w3-col l3">
+            <img src="img/logo/client/mpc.png" />
+        </div>
+        <div class="w3-col l3">
+            <img src="img/logo/client/punhlaing.png" />
+        </div>
+        <div class="w3-col l3">
+            <img src="img/logo/client/sakura.png" />
+        </div>
+        <div class="w3-col l3">
+            <img src="img/logo/client/saudi_arabia_em.png" />
+        </div>
+        <div class="w3-col l3">
+            <img src="img/logo/client/schneider.png" />
+        </div>
+
+        <div class="w3-col l3">
+            .
+        </div>
+
+        <div class="w3-col l3">
+            <img src="img/logo/client/star_city.png" />
+        </div>
+        <div class="w3-col l3">
+            <img src="img/logo/client/strand.png" />
+        </div>
+
+        <div class="w3-col l3">
+            .
+        </div>
+    </div>
+
+    <!-- Partner Section -->
+    <div class="w3-row w3-white w3-padding-64 w3-center">
+        <h1 class="w3-text-blue w3-xxlarge">Our Valuable Partners</h1>
+        <div class="w3-col l3">
+            <img src="img/logo/partner/acatel_lucent.png" />
+        </div>
+        <div class="w3-col l3">
+            <img src="img/logo/partner/aksh.png" />
+        </div>
+        <div class="w3-col l3">
+            <img src="img/logo/partner/cisco.png" />
+        </div>
+        <div class="w3-col l3">
+            <img src="img/logo/partner/huawei.png" />
+        </div>
+        <div class="w3-col l3">
+            <img src="img/logo/partner/kddi.png" />
+        </div>
+        <div class="w3-col l3">
+            <img src="img/logo/partner/link.png" />
+        </div>
+        <div class="w3-col l3">
+            <img src="img/logo/partner/plumett.png" />
+        </div>
+        <div class="w3-col l3">
+            <img src="img/logo/partner/zyxel.png" />
+        </div>    
+    </div>    
+    
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-padding-64 w3-light-grey w3-medium w3-center">
+  <div class="w3-row-padding">
+    <div class="w3-col s4">
+      <h4>Quick Contact</h4>
+      <p>Questions? Go ahead.</p>
+      <form action="#" target="_blank">
+        <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required></p>
+        <button type="submit" class="w3-button w3-block w3-blue">Send</button>
+      </form>
+    </div>
+
+    <div class="w3-col s4">
+      <h4>Exra Links</h4>
+      <p><a href="#">About us</a></p>
+      <p><a href="#">We're hiring</a></p>
+      <p><a href="#">Support</a></p>
+      <p><a href="#">Find store</a></p>
+      <p><a href="#">Site Maps</a></p>
+    </div>
+
+    <div class="w3-col s4 w3-justify">
+      <h4>Show Room</h4>
+      <p>
+        <i class="fa fa-fw fa-map-marker"></i> Address <br>
+        No.16 (A-1), Shan Kone St,
+        Myaynigone (N), Sanchaung Tsp, Yangon, Myanmar.
+      </p>
+      <p><i class="fa fa-fw fa-phone"></i> Phone No <br>
+        +95 1 516 687 ,
+        +95 9 730 802 96
+      </p>
+      <p><i class="fa fa-fw fa-envelope"></i> Email <br>
+        futuretech-it@myanmar.com.mm <br>
+        sales-marketing@futuretech.com.mm
+      </p>
+      <h4>Follow on Social Network</h4>
+      <p>
+        <i class="fa fa-facebook-official w3-hover-opacity w3-xlarge w3-text-blue"></i>
+        <i class="fa fa-instagram w3-hover-opacity w3-xlarge w3-text-blue"></i>
+        <i class="fa fa-snapchat w3-hover-opacity w3-xlarge w3-text-blue"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity w3-xlarge w3-text-blue"></i>
+        <i class="fa fa-twitter w3-hover-opacity w3-xlarge w3-text-blue"></i>
+        <i class="fa fa-linkedin w3-hover-opacity w3-xlarge w3-text-blue"></i>
+      </p>
+    </div>
+  </div>
+    <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:25px;padding-right:58px">
+        <p class="w3-center">Copyright © 2017 Future Tech Information Technology Co.,Ltd. All Rights Reserved.</p>
+        <p class="w3-small w3-margin">Proudly Made by <a target="_blank" href="https://arkarmaung.tk/">Arkar</a></p>
+    </div>    
+</footer>
+
+<!--facebook page chat js-->
+<style>.fb-livechat,.fb-widget{display:none}.ctrlq.fb-button,.ctrlq.fb-close{position:fixed;right:24px;cursor:pointer}.ctrlq.fb-button{z-index:1;background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEyOCAxMjgiIGhlaWdodD0iMTI4cHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjggMTI4IiB3aWR0aD0iMTI4cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxyZWN0IGZpbGw9IiMwMDg0RkYiIGhlaWdodD0iMTI4IiB3aWR0aD0iMTI4Ii8+PC9nPjxwYXRoIGQ9Ik02NCwxNy41MzFjLTI1LjQwNSwwLTQ2LDE5LjI1OS00Niw0My4wMTVjMCwxMy41MTUsNi42NjUsMjUuNTc0LDE3LjA4OSwzMy40NnYxNi40NjIgIGwxNS42OTgtOC43MDdjNC4xODYsMS4xNzEsOC42MjEsMS44LDEzLjIxMywxLjhjMjUuNDA1LDAsNDYtMTkuMjU4LDQ2LTQzLjAxNUMxMTAsMzYuNzksODkuNDA1LDE3LjUzMSw2NCwxNy41MzF6IE02OC44NDUsNzUuMjE0ICBMNTYuOTQ3LDYyLjg1NUwzNC4wMzUsNzUuNTI0bDI1LjEyLTI2LjY1N2wxMS44OTgsMTIuMzU5bDIyLjkxLTEyLjY3TDY4Ljg0NSw3NS4yMTR6IiBmaWxsPSIjRkZGRkZGIiBpZD0iQnViYmxlX1NoYXBlIi8+PC9zdmc+) center no-repeat #0084ff;width:60px;height:60px;text-align:center;bottom:24px;border:0;outline:0;border-radius:60px;-webkit-border-radius:60px;-moz-border-radius:60px;-ms-border-radius:60px;-o-border-radius:60px;box-shadow:0 1px 6px rgba(0,0,0,.06),0 2px 32px rgba(0,0,0,.16);-webkit-transition:box-shadow .2s ease;background-size:80%;transition:all .2s ease-in-out}.ctrlq.fb-button:focus,.ctrlq.fb-button:hover{transform:scale(1.1);box-shadow:0 2px 8px rgba(0,0,0,.09),0 4px 40px rgba(0,0,0,.24)}.fb-widget{background:#fff;z-index:2;position:fixed;width:360px;height:435px;overflow:hidden;opacity:0;bottom:0;right:24px;border-radius:6px;-o-border-radius:6px;-webkit-border-radius:6px;box-shadow:0 5px 40px rgba(0,0,0,.16);-webkit-box-shadow:0 5px 40px rgba(0,0,0,.16);-moz-box-shadow:0 5px 40px rgba(0,0,0,.16);-o-box-shadow:0 5px 40px rgba(0,0,0,.16)}.fb-credit{text-align:center;margin-top:8px}.fb-credit a{transition:none;color:#bec2c9;font-family:Helvetica,Arial,sans-serif;font-size:12px;text-decoration:none;border:0;font-weight:400}.ctrlq.fb-overlay{z-index:0;position:fixed;height:100vh;width:100vw;-webkit-transition:opacity .4s,visibility .4s;transition:opacity .4s,visibility .4s;top:0;left:0;background:rgba(0,0,0,.05);display:none}.ctrlq.fb-close{z-index:4;padding:0 6px;background:#365899;font-weight:700;font-size:11px;color:#fff;margin:8px;border-radius:3px}.ctrlq.fb-close::after{content:'x';font-family:sans-serif}</style>
+
+<div class="fb-livechat">
+  <div class="ctrlq fb-overlay"></div>
+  <div class="fb-widget">
+    <div class="ctrlq fb-close"></div>
+    <div class="fb-page" data-href="https://www.facebook.com/Future-Tech-Information-Technology-CoLtd-1763600080634528/" data-tabs="messages" data-width="360" data-height="400" data-small-header="true" data-hide-cover="true" data-show-facepile="false">
+      <blockquote cite="https://www.facebook.com/Future-Tech-Information-Technology-CoLtd-1763600080634528/" class="fb-xfbml-parse-ignore"> </blockquote>
+    </div>
+    <div class="fb-credit"> 
+      <a href="https://www.labnol.org/software/facebook-messenger-chat-widget/9583/" target="_blank">Facebook Chat Widget by Digital Inspiration</a>
+    </div>
+    <div id="fb-root"></div>
+  </div>
+  <a href="https://m.me/Future-Tech-Information-Technology-CoLtd-1763600080634528" title="Send us a message on Facebook" class="ctrlq fb-button"></a> 
+</div>
+	
+<script src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>$(document).ready(function(){var t={delay:125,overlay:$(".fb-overlay"),widget:$(".fb-widget"),button:$(".fb-button")};setTimeout(function(){$("div.fb-livechat").fadeIn()},8*t.delay),$(".ctrlq").on("click",function(e){e.preventDefault(),t.overlay.is(":visible")?(t.overlay.fadeOut(t.delay),t.widget.stop().animate({bottom:0,opacity:0},2*t.delay,function(){$(this).hide("slow"),t.button.show()})):t.button.fadeOut("medium",function(){t.widget.stop().show().animate({bottom:"30px",opacity:1},2*t.delay),t.overlay.fadeIn(t.delay)})})});</script>
+
+<!-- End facebook page chat js-->
+
+<!-- End page content -->
+
+
+    
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script src="js/ft.js"></script>
+    
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+
+<script>
+  // This is sub menu js code
+    
+//  function mySubmenu(id) {
+//      var x = document.getElementById(id);
+//
+//      if (x.className.indexOf("w3-show") == -1) {
+//          x.className += " w3-show";          
+//      } else {
+//          close_submenu("solution-menu");
+//          close_submenu("product-menu");
+//          x.className = x.className.replace(" w3-show", "");
+//          x.previousElementSibling.className = x.previousElementSibling.className.replace("w3-red", "w3-black");
+//      }
+//  }
+//    
+//    function close_submenu(id){
+//        var x = document.getElementById(id);
+//        x.className = x.className.replace(" w3-show", "");        
+//    }
+//
+
+    
+</script>
+
+</body>
+</html>
