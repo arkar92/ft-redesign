@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+<title>Global Direct Link | Home Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script src="https://www.w3schools.com/lib/w3.js"></script> 
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {  
+    background-image: url('/gdl-img/trading-min.jpg');
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("/gdl-img/construction-min.jpg");
+    min-height: 500px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("/w3images/parallax3.jpg");
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+
+
+    
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+      <a href="#home" class="w3-bar-item w3-button w3-black">
+ <b>Global Direct Link</b></a>
+    
+    <span class="w3-right">
+        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-home" aria-hidden="true"></i>
+ HOME</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> SERVICES</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-red">
+          <i class="fa fa-search"></i>
+        </a>
+    </span>
+    
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+    <a href="#" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+  </div>
+</div>
+
+<!-- /////////////////////////////
+        Home Hero Image Slider
+    //////////////////////////////
+-->
+    
+    <div class="hero-slider w3-row">
+        <!--Image Slide -->
+        <div class="w3-half">
+            <div class="w3-display-container w3-opacity-min">
+                <img src="gdl-img/construction-min.jpg" style="width: 100%;" />
+                <div class="w3-display-middle ">
+                    <h1 class="w3-black w3-opacity-min w3-padding w3-xxlarge">Global Direct Link</h1>
+                </div>
+            </div>
+        </div>
+        <!--Slide Content-->
+        <div class="w3-half">
+            <div class="w3-display-container" style="height: 450px;">
+                <div class="w3-display-middle">
+                    <h1 class="w3-xxlarge">Global Direct Link</h1>
+                    <p class="w3-large">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Vivamus vulputate pulvinar nunc, id aliquam ligula sodales ac. 
+                        Maecenas id lobortis massa, sed pretium nisi.
+                    </p>
+                    <p class="w3-center">
+                        <a href="#" class="w3-button w3-black">Learn More</a>
+                    </p>
+                </div>
+                
+                <div class="w3-display-bottomright">
+                    <p>
+                        <button class="w3-button w3-black" onclick="heroSlider.previous()"><i class="fa fa-angle-left" aria-hidden="true"></i>
+</button>
+                        <button class="w3-button w3-black" onclick="heroSlider.next()"><i class="fa fa-angle-right" aria-hidden="true"></i>
+</button>
+                    </p>
+                </div>
+            </div>            
+        </div>
+    </div>
+    
+    <div class="hero-slider w3-row">
+        <!--Image Slide -->
+        <div class="w3-half">
+            <div class="w3-display-container w3-opacity-min">
+                <img src="gdl-img/trading-min.jpg" style="width: 100%;" />
+                <div class="w3-display-middle ">
+                    <h1 class="w3-black w3-opacity-min w3-padding w3-xxlarge">Trading</h1>
+                </div>
+            </div>
+        </div>
+        <!--Slide Content-->
+        <div class="w3-half">
+            <div class="w3-display-container" style="height: 450px;">
+                <div class="w3-display-middle">
+                    <h1 class="w3-xxlarge">Trading</h1>
+                    <p class="w3-large">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Vivamus vulputate pulvinar nunc, id aliquam ligula sodales ac. 
+                        Maecenas id lobortis massa, sed pretium nisi.
+                    </p>
+                    <p class="w3-center">
+                        <a href="#" class="w3-button w3-black">Learn More</a>
+                    </p>
+                </div>
+                
+                <div class="w3-display-bottomright">
+                    <p>
+                        <button class="w3-button w3-black" onclick="heroSlider.previous()"><i class="fa fa-angle-left" aria-hidden="true"></i>
+</button>
+                        <button class="w3-button w3-black" onclick="heroSlider.next()"><i class="fa fa-angle-right" aria-hidden="true"></i>
+</button>
+                    </p>
+                </div>
+            </div>            
+        </div>
+    </div>
+    
+    <div class="hero-slider w3-row">
+        <!--Image Slide -->
+        <div class="w3-half">
+            <div class="w3-display-container w3-opacity-min">
+                <img src="gdl-img/factory-min.jpg" style="width: 100%;" />
+                <div class="w3-display-middle ">
+                    <h1 class="w3-black w3-opacity-min w3-padding w3-xxlarge">Manufacturing</h1>
+                </div>
+            </div>
+        </div>
+        <!--Slide Content-->
+        <div class="w3-half">
+            <div class="w3-display-container" style="height: 450px;">
+                <div class="w3-display-middle">
+                    <h1 class="w3-xxlarge">Manufacturing</h1>
+                    <p class="w3-large">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Vivamus vulputate pulvinar nunc, id aliquam ligula sodales ac. 
+                        Maecenas id lobortis massa, sed pretium nisi.
+                    </p>
+                    <p class="w3-center">
+                        <a href="#" class="w3-button w3-black">Learn More</a>
+                    </p>
+                    
+                </div>
+                <div class="w3-display-bottomright">
+                    <p>
+                                                <button class="w3-button w3-black" onclick="heroSlider.previous()"><i class="fa fa-angle-left" aria-hidden="true"></i>
+</button>
+                        <button class="w3-button w3-black" onclick="heroSlider.next()"><i class="fa fa-angle-right" aria-hidden="true"></i>
+</button>
+                    </p>
+                </div>
+            </div>            
+        </div>
+    </div>
+    
+    <div class="hero-slider w3-row">
+        <!--Image Slide -->
+        <div class="w3-half">
+            <div class="w3-display-container w3-opacity-min">
+                <img src="gdl-img/mine-min.jpg" style="width: 100%;" />
+                <div class="w3-display-middle ">
+                    <h1 class="w3-black w3-opacity-min w3-padding w3-xxlarge">Mining</h1>
+                </div>
+            </div>
+        </div>
+        <!--Slide Content-->
+        <div class="w3-half">
+            <div class="w3-display-container" style="height: 450px;">
+                <div class="w3-display-middle">
+                    <h1 class="w3-xxlarge">Mining</h1>
+                    <p class="w3-large">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Vivamus vulputate pulvinar nunc, id aliquam ligula sodales ac. 
+                        Maecenas id lobortis massa, sed pretium nisi.
+                    </p>
+                    <p class="w3-center">
+                        <a href="#" class="w3-button w3-black">Learn More</a>
+                    </p>
+                    
+                </div>
+                <div class="w3-display-bottomright">
+                    <p>
+                                                <button class="w3-button w3-black" onclick="heroSlider.previous()"><i class="fa fa-angle-left" aria-hidden="true"></i>
+</button>
+                        <button class="w3-button w3-black" onclick="heroSlider.next()"><i class="fa fa-angle-right" aria-hidden="true"></i>
+</button>
+                    </p>
+                </div>
+            </div>            
+        </div>
+    </div>
+    
+    <div class="hero-slider w3-row">
+        <!--Image Slide -->
+        <div class="w3-half">
+            <div class="w3-display-container w3-opacity-min">
+                <img src="gdl-img/news-min.jpg" style="width: 100%;" />
+                <div class="w3-display-middle ">
+                    <h1 class="w3-black w3-padding w3-opacity-min w3-xxlarge w3-center">Information <br/> & <br/> News Publishing</h1>
+                </div>
+            </div>
+        </div>
+        <!--Slide Content-->
+        <div class="w3-half">
+            <div class="w3-display-container" style="height: 450px;">
+                <div class="w3-display-middle">
+                    <h1 class="w3-xxlarge">Information & News Publishing</h1>
+                    <p class="w3-large">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Vivamus vulputate pulvinar nunc, id aliquam ligula sodales ac. 
+                        Maecenas id lobortis massa, sed pretium nisi.
+                    </p>
+                    <p class="w3-center">
+                        <a href="#" class="w3-button w3-black">Learn More</a>
+                    </p>
+                    
+                </div>
+                <div class="w3-display-bottomright">
+                    <p>
+                                                <button class="w3-button w3-black" onclick="heroSlider.previous()"><i class="fa fa-angle-left" aria-hidden="true"></i>
+</button>
+                        <button class="w3-button w3-black" onclick="heroSlider.next()"><i class="fa fa-angle-right" aria-hidden="true"></i>
+</button>
+                    </p>
+                </div>
+            </div>            
+        </div>
+    </div>
+    
+    
+    <div class="hero-slider w3-row">
+        <!--Image Slide -->
+        <div class="w3-half">
+            <div class="w3-display-container w3-opacity-min">
+                <img src="gdl-img/home-min.jpg" style="width: 100%;" />
+                <div class="w3-display-middle ">
+                    <h1 class="w3-black w3-padding w3-opacity-min w3-xxlarge w3-center">Real Estate</h1>
+                </div>
+            </div>
+        </div>
+        <!--Slide Content-->
+        <div class="w3-half">
+            <div class="w3-display-container" style="height: 450px;">
+                <div class="w3-display-middle">
+                    <h1 class="w3-xxlarge">Real Estate</h1>
+                    <p class="w3-large">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Vivamus vulputate pulvinar nunc, id aliquam ligula sodales ac. 
+                        Maecenas id lobortis massa, sed pretium nisi.
+                    </p>
+                    <p class="w3-center">
+                        <a href="#" class="w3-button w3-black">Learn More</a>
+                    </p>
+                    
+                </div>
+                <div class="w3-display-bottomright">
+                    <p>
+                                                <button class="w3-button w3-black" onclick="heroSlider.previous()"><i class="fa fa-angle-left" aria-hidden="true"></i>
+</button>
+                        <button class="w3-button w3-black" onclick="heroSlider.next()"><i class="fa fa-angle-right" aria-hidden="true"></i>
+</button>
+                    </p>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+<!-- First Parallax Image with Logo Text -->
+<!--
+<div class="bgimg-1  w3-display-container w3-opacity-min">   
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <h1 class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Global Direct Link</h1>
+    <p class="w3-center w3-padding w3-black w3-large w3-wide w3-animate-opacity">Link to global business</p>
+  </div>    
+</div>
+-->
+
+<!-- Hero Image Slider -->
+<!--
+    <div class="w3-display-container w3-opcity-min">
+        <img src="gdl-img/trading-min.jpg" alt="Hero Image 1" class="w3-image" />
+        <div class="w3-padding w3-display-bottommiddle">Bottom Mid</div>
+    </div>
+-->
+    
+<!-- /////////////////////////////
+        About Us Section
+    //////////////////////////////
+-->
+    
+<!-- Container (About Section) -->
+<div class=" w3-container w3-light-grey w3-padding-64" id="about">
+    <div class="w3-content">
+        <h3 class=" w3-center w3-wide">ABOUT US</h3>
+          <p class="w3-center"><em>link to global business</em></p>
+            <p>
+                Global Direct Link Co.,(GDL), a member of Union of Myanmar 
+                Federation of Chamber of Commerce and Industry (UMFCCI), is in 
+                operation its businesses since January, 2012 at 98(B), Inya Road, 
+                in Yangon, Myanmar.
+            </p>
+            <p>
+                Main functions are promoting business activities between Japan and Myanmar 
+                through mutual beneficial perspectives & cooperation especially in Trade, Media, 
+                Advertisement and Research & Consultancy Services.
+            </p>
+            <p>
+                GDL started into Media Industry in 2014 as a sole investor for printing and publication 
+                of Global New Light of Myanmar English Daily (GNLM) after installation of modern printing 
+                facilities in Yangon, Myanmar under the Joint Venture Agreement with the News & Periodical 
+                Enterprise of the Ministry of Information.        
+            </p>
+            <p>
+                Global New Light of Myanmar English Daily (GNLM) was well known as state owned English 
+                Daily Newspaper for decades and transformation is under way.
+            </p>
+            <p class="w3-center">
+                <a href="#" class="w3-button w3-black">Learn More</a>
+            </p>
+    </div>
+</div>
+    
+<!-- /////////////////////////////
+        Our Services
+    //////////////////////////////
+-->
+<div class="w3-row w3-center w3-dark-grey w3-padding-64">
+    <h3 class=" w3-text-white w3-center w3-wide">OUR SERVICES</h3>
+  <div class="w3-third w3-button w3-hover-white  w3-section">
+    <span class="w3-xlarge">Manufacturing</span><br>
+    Wood processing & Newspaper printing
+  </div>
+  <div class="w3-third w3-button w3-hover-white  w3-section">
+    <span class="w3-xlarge">Information & News Publishing</span><br>
+    Daily newspaper & information services
+  </div>
+  <div class="w3-third w3-button w3-hover-white  w3-section">
+    <span class="w3-xlarge">Mining</span><br>
+    Gems & Gold
+  </div>
+  
+    <div class="w3-half w3-button w3-hover-white w3-section">
+        <span class="w3-xlarge">Trading</span><br>
+        Import & exports of natural resources, <br/> vehicles, building & printing material
+    </div>
+    <div class="w3-half w3-button w3-hover-white w3-section">
+        <span class="w3-xlarge">Real Estate</span><br>
+        Developer <br/> Project Management
+    </div>
+</div>
+
+<!-- /////////////////////////////
+        Our Business Partners
+    //////////////////////////////
+-->    
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <h3 class=" w3-text-white w3-center w3-wide">OUR BUSINESS PARTNERS</h3>
+    <div class="w3-row-padding">
+        
+        <div class=" w3-quarter">
+                <div class="w3-container w3-card w3-white w3-hover-light-grey" style="height: 300px">
+                    <img src="gdl-img/gnlm.png" alt="Person" class="w3-image">
+                    <h4 class="w3-medium w3-center"><b>Global New Light of Myanmar</b></h4>
+                </div>                
+        </div>
+        
+        <div class=" w3-quarter">
+                <div class="w3-container w3-card w3-white w3-hover-light-grey" style="height: 300px">
+                    <img src="gdl-img/toniwin.png" alt="Person" class="w3-image">
+                    <h4 class="w3-medium w3-center"><b>Tominaga Industry Corporation</b></h4>
+                </div>                
+        </div>
+        
+        <div class=" w3-quarter">
+                <div class="w3-container w3-card w3-white w3-hover-light-grey" style="height: 300px">
+                    <img src="gdl-img/kyodo.png" alt="Person" class="w3-image">
+                    <h4 class="w3-medium w3-center"><b>Kyodonews Japan</b><br/>.</h4>
+                </div>                
+        </div>
+        
+        <div class=" w3-quarter">
+                <div class="w3-container w3-card w3-white w3-hover-light-grey" style="height: 300px">
+                    <img src="gdl-img/npe.png" alt="Person" class="w3-image">
+                    <h4 class="w3-medium w3-center">
+                        <b>News & Periodical Enterprise
+Ministry of Information</b></h4>
+                </div>                
+        </div>
+            
+                         
+    </div>
+  </div>
+</div>
+
+<!-- /////////////////////////////
+        Contact Us
+    //////////////////////////////
+-->    
+    <div class="w3-light-grey w3-row">
+        <div class="w3-half w3-black" style="height: 350px;">
+            <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
+        </div>
+        <div class="w3-half w3-white" style="height: 350px;">
+            <div class="w3-content w3-padding w3-padding-64">
+                <div class="w3-large">
+                <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> 98/B, Inyar Road, Kamaryut township, Yangon, Myanmar.<br>
+                <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +95 1 513178, Fax: +95 1 511386 <br>
+                <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: info@globaldirectlink.com<br>
+            </div>
+              <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+              <form action="/action_page.php" target="_blank">
+                <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                  <div class="w3-half">
+                    <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                  </div>
+                  <div class="w3-half">
+                    <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                  </div>
+                </div>
+                <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+                <button class="w3-button w3-black w3-right w3-section" type="submit">
+                  <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                </button>
+              </form>
+            </div>            
+        </div>
+    </div>    
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64" style="margin-top: 50px">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Copyright © Global Direct Link 2018</p>
+</footer>
+ 
+<!-- w3 js   -->
+<script>
+    heroSlider = w3.slideshow(".hero-slider",6000);
+</script>
+    
+<!-- Add Google Maps -->
+<script>
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+//function myFunction() {
+//    var navbar = document.getElementById("myNavbar");
+//    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+//        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+//    } else {
+//        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+//    }
+//}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+<!-- Add Google Maps -->
+<script>
+function myMap()
+{
+  myCenter=new google.maps.LatLng(16.827559, 96.140474);
+  var mapOptions= {
+    center:myCenter,
+    zoom:15, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuSr5a5KMyK3Y3k2iYryUhd2wf3H-aN7A&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+</body>
+</html>
